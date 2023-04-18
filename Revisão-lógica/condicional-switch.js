@@ -26,3 +26,6 @@ switch (diaSemana) {
     dia = " -- ";
 }
 console.log(`Hoje é ${dia}`);
+
+
+// defalt seria o mesmo que else

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+  </head>
+  <body>
+    <script>
+      //UTILIZAÇÃO DO LOOP WHILE
+
+      let numero = prompt("Digite um número");
+
+      document.write("Entrou do loop while <br><br>");
+
+      let indice = 0;
+      while (indice <= 10) {
+        document.write(`${indice} x ${numero} = ${indice * numero} <br>`);
+        indice++;
+      }
+      document.write("saiu do loop while <br><br>");
+
+      //Usamos o do while quando quisermos que um certo código seja executado pelo menos uma vez pois nesse estrutura o código é executado primeiro e em seguida que é feita a comparação lógica
+      do{
+        document.write(`${indice} x ${numero} = ${indice * numero} <br>`);
+        indice++;
+      }while(indice <= 10)
+
+      
+
+      document.write("Entrou no loop for <br><br>");
+      // No loop for podemos ter certeza absoluta de quantas vezes o código será executado por conta do 2º parametro
+      for (let j = 0; j <= 10; j++) {
+        document.write(`${j} x ${numero} = ${j * numero} <br>`);
+      }
+      document.write("saiu do loop for");
+
+      //A MESMA COISA DO CÓDIGO ACIMA (NÃO MUITO EFICIENTE POR CONTA DA QUANTIDADE DE LINHAS)
+
+      //   document.write(`Tabuada do ${numero}`)
+      //   document.write(`1 x ${numero} = ${(1 * numero)} <br>`);
+      //   document.write(`2 x ${numero} = ${(2 * numero)} <br>`);
+      //   document.write(`3 x ${numero} = ${(3 * numero)} <br>`);
+      //   document.write(`4 x ${numero} = ${(4 * numero)} <br>`);
+      //   document.write(`5 x ${numero} = ${(5 * numero)} <br>`);
+      //   document.write(`6 x ${numero} = ${(6 * numero)} <br>`);
+      //   document.write(`7 x ${numero} = ${(7 * numero)} <br>`);
+      //   document.write(`8 x ${numero} = ${(8 * numero)} <br>`);
+      //   document.write(`9 x ${numero} = ${(9 * numero)} <br>`);
+      //   document.write(`10 x ${numero} = ${(10 * numero)}`);
+    </script>
+  </body>
+</html>
