@@ -15,6 +15,15 @@ if(!comprouBilhete){
 }
 
 
+// Operador Ternário
+let msgMaiorIdade = "";
+const idade2 = 19;
+msgMaiorIdade = (idade2 >=18) ? "Pode viajar, é maior de idade"  : "Não pode viajar, é menor de idade";
+
+console.log(msgMaiorIdade);
+
+
+
  let n1 = 5;
  let n2 = 8;
  let media = (n1 + n2) / 2;
