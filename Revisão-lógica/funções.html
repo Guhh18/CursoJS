@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funções</title>
+  </head>
+  <body>
+    <script>
+      
+        //Declaração de função
+        function ola() {
+            document.write("Olá mundo<br>")
+        }
+        ola()
+        
+        //Expressão de função
+        const ola2 = function(){
+            document.write("Olá mundo de function expression<br>")
+        }
+        ola2()
+
+        //Arrow functions
+        const ola3 = () => {
+            document.write("Olá mundo de arrow function<br>")
+        }
+        ola3()
+
+        //Obtem dia da semana
+        function obtemDiaSemana(){
+            return new Date().getDay()
+        }
+        document.write(`${obtemDiaSemana()}`)
+
+        //Funções que recebem parâmetros
+        function somar(n1 = 0, n2 = 0){
+          // let _n1 = n1 || 0
+          // let _n2 = n2 || 0
+          return n1 + n2
+        }
+        let soma = somar(3, 5)
+        console.log(soma);
+
+        console.log(somar(10));
+        console.log(somar());
+
+
+        //Observando a função acima percebemos que ela pede 2 parâmetos pra fazer a soma, em um caso de uso em que o usuário insira apenas 1 dos valores necessários pra fazer a soma o código irá dar um erro (NaN), para evitar isso podemos usar o curto-circuito pra dar o valor 0 a variável vazia, mas esta alternativa pra contornar o problema é um pouco antiga (ECMA Script 5), podemos usar uma solução um pouco mais atual que é definir os parâmetros da função como 0, assim, mesmo que um possível usuário insira apenas um valor (ultimo console.log()) o programa não vai dar erro pois será somado o valor que o usuário inseriu e o 0 que foi setado nos parâmetros da função (Esse método pode não funcionar em alguns navegadores mais antigos).
+
+    </script>
+  </body>
+</html>

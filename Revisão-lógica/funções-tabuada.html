@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funções - tabuada</title>
+  </head>
+  <body>
+    <h1>Tabuada</h1>
+
+    <button class="mostrar">Mostrar Tabuada</button>
+    <button class="limpar">limpar Tabuada</button>
+    <div id="output"></div>
+
+    <script>
+      const output = document.getElementById("output");
+      const button_mostrar = document.querySelector(".mostrar");
+      const button_limpar = document.querySelector(".limpar");
+      button_mostrar.addEventListener("click", mostrarTabuada);
+      button_limpar.addEventListener("click", limparTabuada);
+
+      function mostrarTabuada() {
+        let numero = parseFloat(prompt("Digite um número inteiro"));
+
+        let msg = "";
+        for (let i = 0; i <= 1000; i++) {
+          // if(i === 10){
+          //   return
+          // }
+          msg += `${numero} x ${i}  = ${i * numero}<br>`;
+        }
+        output.innerHTML = msg;
+      }
+
+      function limparTabuada() {
+        output.innerHTML = ""
+      }
+
+      // *Toda infromação que vem do lado usuário é string*
+      // O return sai obrigatiriamente da função (retornando um valor ou não).
+    </script>
+  </body>
+</html>
