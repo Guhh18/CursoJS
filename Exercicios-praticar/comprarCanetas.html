@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compra caneta</title>
+  </head>
+  <body>
+    <button class="comprarMais">Comprar mais canetas?</button>
+    <button class="abastecerEstoque">Quer abastecer o estoque?</button>
+
+    <script>
+      const buttonComprar = document.querySelector(".comprarMais");
+      const buttonAbastecer = document.querySelector(".abastecerEstoque");
+      buttonComprar.addEventListener("click", compraCaneta);
+      buttonAbastecer.addEventListener("click", abastecerEstoque);
+
+      const produto = {
+        produto: "Caneta",
+        qtd: 10,
+      };
+
+      function compraCaneta() {
+        let qtdCanetas = parseFloat(prompt("Quantas canetas vc quer comprar?"));
+
+        if (produto.qtd == 0) {
+          console.log(`Estamos sem estoque, espere o abastecimento`);
+          
+        } else if (qtdCanetas <= produto.qtd) {
+          produto.qtd -= qtdCanetas;
+          console.log(`Vc comprou ${qtdCanetas} canetas`);
+          console.log(`estoque atual é: ${produto.qtd} canetas`);
+        } else {
+          console.log(
+            `Estamos com um estoque de apenas ${produto.qtd} canetas. Desculpe`
+          );
+        }
+      }
+      function abastecerEstoque() {
+        produto.qtd = 10;
+        console.log(`Estoque atual é ${produto.qtd}`);
+      }
+    </script>
+  </body>
+</html>
